@@ -1,0 +1,16 @@
+---
+- name: Update apt
+  apt: update_cache=yes
+  sudo: yes
+
+- name: Base unix packages
+  apt: pkg={{item}} state=latest
+  sudo: yes
+  with_items:
+    - autofs
+    - autossh
+    - build-essential
+    - curl
+    - git
+    - redis-server
+    - nginx

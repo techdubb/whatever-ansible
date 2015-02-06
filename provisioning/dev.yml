@@ -1,0 +1,5 @@
+- hosts: all
+  vars:
+  sudo: yes
+  roles:
+    - base
